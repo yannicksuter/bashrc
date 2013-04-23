@@ -27,7 +27,7 @@ export MM_CHARSET=de_DE.UTF-8
 
 # don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoreboth
-export HISTFILESIZE=2000
+export HISTFILESIZE=4000
 # dont put the following in the bash_history (an arrow up + return would be bad with rm or reboot ;)
 export HISTIGNORE="rm -rf*:history*:reboot:shutdown*:ll:"
 export FACTERLIB=/var/lib/puppet/lib/facter
