@@ -67,11 +67,12 @@ fi
 # please add git prompt
 if [ "$color_prompt" = yes ]; then
   case $USER in
-    root)
-      PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[1;34m\]\w\[\033[00m\]\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\]\$\[\033[00m\] '
-      ;;
+  root)
+  # optimized for Debian
+        PS1='\[\033[01;33m\][\t]\[\033[00m\] ${debian_chroot:+($debian_chroot)}\[\033[00;31m\]\u@\h\[\033[00m\]:\[\033[1;34m\]\W\[\033[00m\]\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\]\$\[\033[00m\] '
+        ;;
     *)
-      PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[1;34m\]\w\[\033[00m\]\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\]\$\[\033[00m\] '
+      PS1='\[\033[01;33m\][\t]\[\033[00m\] ${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[1;34m\]\W\[\033[00m\]\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\]\$\[\033[00m\] '
     ;;
   esac
 else
