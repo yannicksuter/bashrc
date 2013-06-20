@@ -3,7 +3,8 @@
 # ---- language-env DON'T MODIFY THIS LINE!
 # settings for german speaking users
 
-LANG="de_DE.UTF-8"
+#LANG="de_DE.UTF-8"
+LANG="en_US.UTF-8"
 export LANG
 
 #LC_MESSAGES=de_DE
